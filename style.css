@@ -1,0 +1,239 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans&family=Roboto+Mono:wght@400;500&family=Tilt+Prism&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    background: white;
+}
+
+.cabr{
+    display: flex;
+    justify-content: space-between;
+    margin: 1vw;
+    margin-right: 2vw;
+}
+.botoes{
+    margin: auto 1vw;
+}
+.logo{
+    font-family: 'Tilt Prism', cursive;
+    font-size: 1rem;
+    color: rgb(54, 36, 62);
+}
+.divisoes{
+    text-align: center;
+    margin: auto;
+    width: 25vw;
+    padding: 0.1vh;
+    border-radius: 5PX;
+    background: rgb(119, 106, 132);
+}
+.divisoes a{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.divisoes a:hover{
+    color: white;
+}
+
+/*inicio dos botões*/
+.cta {
+    border: none;
+    background: none;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: rgb(54, 36, 62);
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 110%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  /*inicio dos botões*/
+
+
+.content{
+    height: 54vh;
+    width: 80vw;
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 1vh;
+    margin-left: 10vw;
+    box-shadow: 10px 10px 5px 0px rgb(119, 106, 132);
+}
+.content .slide img{
+    height: 100%;
+    width: 100%;
+}
+.navigation{
+    position: absolute;
+    bottom: 29vh;
+    left: 45vw;
+    display: flex;
+}
+.bar{
+    width: 1.3vw;
+    height: 15px;
+    border: 2px solid rgb(119, 106, 132);
+    margin: 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    transform: .5s ease;
+}
+.bar:hover{
+    background-color: rgb(119, 106, 132);
+}
+input{
+    display: none;
+}
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide{
+    width: 20%;
+    transition: .0.1s;
+}
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+.produtos{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 65vh;
+    width: 99vw;
+}
+.produtos img{
+    width: 18vw;
+    border-radius: 4px;
+}
+
+.produtos a{
+    border:  solid 1px;
+    padding: 1%;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.produtos figcaption{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.preco-antigo p{
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    text-align: center;
+    margin: 1vh 0vw 1vh 0vw;
+    color: red;
+}
+.preco-atual p{
+    width: 3vw;
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+}
+.preco-atual{
+    display: flex;
+    margin-right: 6vw;
+}
+button {
+    --c: #fff;
+   /* text color */
+    background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    rgb(99, 66, 132);
+   /* background color */
+    color: #0000;
+    border: none;
+    transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+    text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+      calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+    outline-offset: .1em;
+    transition: 0.3s;
+  }
+  
+  button:hover,
+  button:focus-visible {
+    --_p: 0%;
+    --_i: 1;
+  }
+  
+  button:active {
+    text-shadow: none;
+    color: var(--c);
+    box-shadow: inset 0 0 9e9q #0005;
+    transition: 0s;
+  }
+  
+  button {
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 3px;
+    margin: 0;
+    cursor: pointer;
+    padding: .1em .3em;
+  }
